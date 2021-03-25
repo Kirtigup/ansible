@@ -1,5 +1,5 @@
 ---
-- hosts: server-ubuntu 
+- hosts: apache
   become: True
   tasks:
     - name: Install packages
