@@ -1,14 +1,14 @@
 ---
-- hosts: webservers
+- hosts: localhost
   become: True
   tasks:
     - name: Install packages
       apt:
-        name: "nginx
+        name: "apache2"
         state: "present"
-    - name: Start Nginx server
+    - name: Start apache2 server
       service:
-        name: nginx
+        name: apache2
         state: started
         enabled: True
     - name: Deploy static website
